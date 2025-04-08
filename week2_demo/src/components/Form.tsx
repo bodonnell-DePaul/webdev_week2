@@ -1,10 +1,12 @@
 import {useState} from 'react'
+//import DataDisplay from './DataDisplay';
 
 const Form: React.FC = () => {
     const [inputValue, setInputValue] = useState<string>('');
   
     const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
+      //<DataDisplay newUrl={inputValue} />
       alert(`Submitted: ${inputValue}`);
     };
   
