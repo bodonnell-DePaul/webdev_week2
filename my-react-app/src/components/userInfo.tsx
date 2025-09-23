@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Now let's create TSX that mixes HTML-like tags with TypeScript expressions
-const userInfo: React.FC = () => {
+const UserInfo: React.FC = () => {
 
     // First, let's define some TypeScript variables (just like normal TypeScript)
-    const userName: string = 'Alice';           // A string variable
-    const userAge: number = 28;                 // A number variable  
+    const userName: string = 'Brian';           // A string variable
+    const userAge: number = 43;                 // A number variable  
     const isLoggedIn: boolean = true;           // A boolean variable
     const score: number = 95;                   // Another number for calculations
 
@@ -18,7 +18,7 @@ const userInfo: React.FC = () => {
             */}
             
             {/* Example 1: Displaying a simple variable */}
-            <h1>Welcome, {userName}!</h1>
+            <h2>Welcome, {userName}!</h2>
             {/* This creates: <h1>Welcome, Alice!</h1> */}
             
             {/* Example 2: Displaying numbers */}
@@ -44,7 +44,7 @@ const userInfo: React.FC = () => {
     )
 }
 
-export default userInfo;
+export default UserInfo;
   
 
 

@@ -1,6 +1,7 @@
 // Import React to use React features
 import React from 'react';
-import userInfo from './userInfo';
+import UserInfo from './userInfo';
+import { Nav } from 'react-bootstrap';
 
 
 // Component 1: A simple header component
@@ -9,14 +10,18 @@ const Header: React.FC = () => {
     <header>
       {/* Regular HTML-like markup outside curly braces */}
       <h1>My Application</h1>
-      <nav>
+      <Nav variant='pills' defaultActiveKey="/home">
         {/* 
           Note: In TSX we use # for href since we're not doing real navigation yet
           In a real app, you'd use React Router for navigation
         */}
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-      </nav>
+        <Nav.Item>
+            <Nav.Link href="/home">Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+            <Nav.Link eventKey="/about">About</Nav.Link>
+        </Nav.Item>
+      </Nav>
     </header>
   );
 };
@@ -42,17 +47,17 @@ const MainContent: React.FC = () => {
   
   return (
     <main>
-        <userInfo/>
+        <UserInfo/>
       <p>This is the main content area.</p>
       
       {/* Displaying an array using map() inside curly braces */}
-      <ul>
+      <ol>
         {features.map((feature: string, index: number) => (
           <li key={index}>{feature}</li>
           // map() creates a new <li> for each item in the features array
           // key={index} helps React track each list item (required for lists)
         ))}
-      </ul>
+      </ol>
     </main>
   );
 };

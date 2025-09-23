@@ -66,3 +66,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.btn-primary{
+  --bs-btn-hover-bg: #101112;
+}
+
+.greeting{
+  font-style: normal;
+}
+.greeting .vip{
+  font-family: verdana;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.greeting .regular{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 10px;
+}

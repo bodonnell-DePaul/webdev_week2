@@ -3,9 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import WelcomeMessage from './components/welcome'
+import { Button } from 'react-bootstrap'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(0)
+  const [step, setStep] = useState<number>(5);
 // logic will live up here
 
   const buttonClick = () => {
@@ -24,10 +26,10 @@ function App() {
       </div>
       <h1><WelcomeMessage /></h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((count) => count + step)}>
           count is {count}
         </button>
-        <button onClick={buttonClick}>My New Button</button>
+        <Button onClick={() => setStep(1)}>Reset</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
